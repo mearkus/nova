@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, viewport-fit=cover, user-scalable=no"
+    />
+    <meta name="theme-color" content="#05070d" />
+    <title>Nova Frenzy</title>
+  </head>
+  <body>
+    <div id="app">
+      <canvas id="game-canvas" aria-label="Nova Frenzy game canvas"></canvas>
+
+      <div class="hud" aria-live="polite">
+        <div class="hud__group">
+          <span class="hud__label">Score</span>
+          <span id="score" class="hud__value">0</span>
+        </div>
+        <div class="hud__group hud__group--center">
+          <span class="hud__label">Wave</span>
+          <span id="wave" class="hud__value">1</span>
+        </div>
+        <div class="hud__group hud__group--right">
+          <span class="hud__label">Lives</span>
+          <span id="lives" class="hud__value">3</span>
+        </div>
+      </div>
+
+      <div class="status-strip" aria-live="polite">
+        <span id="combo-status" class="status-pill">x1</span>
+        <span id="powerup-status" class="status-pill status-pill--quiet">Ready</span>
+      </div>
+
+      <div id="wave-banner" class="wave-banner" aria-live="polite"></div>
+
+      <button id="pause-button" class="icon-button" type="button" aria-label="Pause">
+        <span aria-hidden="true"></span>
+      </button>
+
+      <section id="start-panel" class="panel panel--active" aria-labelledby="title">
+        <p class="eyebrow">Portrait Arcade</p>
+        <h1 id="title">Nova Frenzy</h1>
+        <button id="start-button" class="primary-button" type="button">Play</button>
+        <p class="best-score">Best <span id="best-score-start">0</span></p>
+      </section>
+
+      <section id="game-over-panel" class="panel" aria-labelledby="game-over-title">
+        <p class="eyebrow">Run Complete</p>
+        <h2 id="game-over-title">Game Over</h2>
+        <p class="final-score">Score <span id="final-score">0</span></p>
+        <p class="best-score">Best <span id="best-score-end">0</span></p>
+        <button id="restart-button" class="primary-button" type="button">Restart</button>
+      </section>
+    </div>
+
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>
